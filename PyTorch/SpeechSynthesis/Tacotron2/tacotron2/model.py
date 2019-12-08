@@ -536,8 +536,8 @@ class Decoder(nn.Module):
          attention_context,
          processed_memory) = self.initialize_decoder_states(memory)
 
-        mel_lengths = torch.zeros([memory.size(0)], dtype=torch.int32).cuda()
-        not_finished = torch.ones([memory.size(0)], dtype=torch.int32).cuda()
+        mel_lengths = torch.zeros([memory.size(0)], dtype=torch.int32)
+        not_finished = torch.ones([memory.size(0)], dtype=torch.int32)
 
         mel_outputs, gate_outputs, alignments = (
             torch.zeros(1), torch.zeros(1), torch.zeros(1))
